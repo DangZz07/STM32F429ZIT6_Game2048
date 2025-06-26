@@ -1,0 +1,980 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "MainScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "Y": 80,
+            "Width": 240,
+            "Height": 240,
+            "Color": {
+              "Red": 119,
+              "Green": 110,
+              "Blue": 101
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 13,
+            "Y": 6,
+            "Width": 72,
+            "Height": 25,
+            "TextId": "__SingleUse_MQNV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 227,
+              "Green": 110,
+              "Blue": 27
+            },
+            "AutoSize": true,
+            "LineSpacing": 5
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 13,
+            "Y": 37,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_2ES5",
+            "ReleasedColor": {
+              "Red": 181,
+              "Green": 103,
+              "Blue": 103
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\medium_rounded_action.json"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile00",
+            "Y": 80,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile01",
+            "X": 60,
+            "Y": 80,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile02",
+            "X": 120,
+            "Y": 80,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile03",
+            "X": 180,
+            "Y": 80,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile10",
+            "Y": 140,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile11",
+            "X": 60,
+            "Y": 140,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile12",
+            "X": 120,
+            "Y": 140,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile13",
+            "X": 180,
+            "Y": 140,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile20",
+            "Y": 200,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile21",
+            "X": 60,
+            "Y": 200,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile22",
+            "X": 120,
+            "Y": 200,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile23",
+            "X": 180,
+            "Y": 200,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile30",
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile31",
+            "X": 60,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile32",
+            "X": 120,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile33",
+            "X": 180,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "CustomContainerDefinitionName": "Tile"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "scoreContainer",
+            "X": 135,
+            "Y": 6,
+            "Width": 45,
+            "Height": 30,
+            "CustomContainerDefinitionName": "Score"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "bestContainer",
+            "X": 180,
+            "Y": 6,
+            "Width": 45,
+            "Height": 30,
+            "CustomContainerDefinitionName": "Best"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "resetGame"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "GameOverScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "GameOverScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 240,
+            "Height": 320,
+            "Color": {
+              "Red": 176,
+              "Green": 84,
+              "Blue": 62
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 38,
+            "Y": 114,
+            "Width": 165,
+            "Height": 25,
+            "TextId": "__SingleUse_I9KM",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "menu",
+            "X": 65,
+            "Y": 166,
+            "Width": 110,
+            "Height": 50,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 110,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2_1",
+            "X": 84,
+            "Y": 179,
+            "Width": 73,
+            "Height": 24,
+            "TextId": "__SingleUse_7DYD",
+            "TextRotation": "0",
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "menu"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionBlock",
+              "ActionComponent": "SelectedGameDesign"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "SelectedGameDesign",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 240,
+            "Height": 320,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "btn3x3",
+            "X": 96,
+            "Y": 69,
+            "Width": 48,
+            "Height": 47,
+            "Alpha": 187,
+            "ButtonTrigger": {
+              "Type": "TouchButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 48,
+                "Height": 47,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "btn5x5",
+            "X": 96,
+            "Y": 206,
+            "Width": 48,
+            "Height": 47,
+            "Alpha": 187,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 48,
+                "Height": 47,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "btn4x4",
+            "X": 96,
+            "Y": 137,
+            "Width": 48,
+            "Height": 47,
+            "Alpha": 187,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 48,
+                "Height": 47,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2",
+            "X": 110,
+            "Y": 224,
+            "Width": 21,
+            "Height": 11,
+            "TextId": "__SingleUse_Z3VS",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1",
+            "X": 110,
+            "Y": 87,
+            "Width": 21,
+            "Height": 11,
+            "TextId": "__SingleUse_2A3F",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 110,
+            "Y": 155,
+            "Width": 21,
+            "Height": 11,
+            "TextId": "__SingleUse_A5N6",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 80,
+            "Y": 23,
+            "Width": 80,
+            "Height": 26,
+            "TextId": "__SingleUse_8CYV",
+            "TextRotation": "0",
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn3x3"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Screen3x3"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn4x4"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "MainScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn5x5"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBtn5x5Clicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen3x3",
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1_1",
+            "X": 88,
+            "Y": 42,
+            "Width": 65,
+            "Height": 35,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 65,
+                "Height": 35,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "scoreContainer",
+            "X": 135,
+            "Y": 6,
+            "Width": 45,
+            "Height": 30,
+            "CustomContainerDefinitionName": "Score"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "bestContainer",
+            "X": 180,
+            "Y": 6,
+            "Width": 45,
+            "Height": 30,
+            "CustomContainerDefinitionName": "Best"
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "Y": 80,
+            "Width": 240,
+            "Height": 240,
+            "Color": {
+              "Red": 119,
+              "Green": 110,
+              "Blue": 101
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 8,
+            "Y": 6,
+            "Width": 72,
+            "Height": 25,
+            "TextId": "__SingleUse_WUUP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 227,
+              "Green": 110,
+              "Blue": 27
+            },
+            "AutoSize": true,
+            "LineSpacing": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2_1",
+            "X": 104,
+            "Y": 54,
+            "Width": 33,
+            "Height": 11,
+            "TextId": "__SingleUse_GMIQ",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile3x31",
+            "Y": 80,
+            "Width": 80,
+            "Height": 80,
+            "CustomContainerDefinitionName": "Tile3x3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile3x32",
+            "X": 80,
+            "Y": 80,
+            "Width": 80,
+            "Height": 80,
+            "CustomContainerDefinitionName": "Tile3x3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile3x33",
+            "X": 160,
+            "Y": 80,
+            "Width": 80,
+            "Height": 80,
+            "CustomContainerDefinitionName": "Tile3x3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile3x34",
+            "Y": 160,
+            "Width": 80,
+            "Height": 80,
+            "CustomContainerDefinitionName": "Tile3x3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile3x35",
+            "Y": 240,
+            "Width": 80,
+            "Height": 80,
+            "CustomContainerDefinitionName": "Tile3x3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile3x36",
+            "X": 80,
+            "Y": 160,
+            "Width": 80,
+            "Height": 80,
+            "CustomContainerDefinitionName": "Tile3x3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile3x37",
+            "X": 80,
+            "Y": 240,
+            "Width": 80,
+            "Height": 80,
+            "CustomContainerDefinitionName": "Tile3x3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile3x38",
+            "X": 160,
+            "Y": 160,
+            "Width": 80,
+            "Height": 80,
+            "CustomContainerDefinitionName": "Tile3x3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "tile3x39",
+            "X": 160,
+            "Y": 240,
+            "Width": 80,
+            "Height": 80,
+            "CustomContainerDefinitionName": "Tile3x3"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1_1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "SelectedGameDesign"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "Tile",
+        "X": 60,
+        "Y": 36,
+        "Width": 60,
+        "Height": 60,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "Width": 60,
+            "Height": 60,
+            "Color": {
+              "Red": 212,
+              "Green": 121,
+              "Blue": 61
+            },
+            "BorderColor": {
+              "Red": 119,
+              "Green": 110,
+              "Blue": 101
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 19,
+            "Y": 22,
+            "Width": 23,
+            "Height": 17,
+            "TextId": "__SingleUse_DV4I",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "TileText",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Score",
+        "X": 68,
+        "Y": 109,
+        "Width": 45,
+        "Height": 30,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 45,
+            "Height": 30,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 6,
+            "Width": 32,
+            "Height": 10,
+            "TextId": "__SingleUse_0K3V",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreText",
+            "X": 11,
+            "Y": 18,
+            "Width": 22,
+            "Height": 10,
+            "TextId": "__SingleUse_Y258",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "Score",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Best",
+        "X": 68,
+        "Y": 109,
+        "Width": 45,
+        "Height": 30,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 45,
+            "Height": 30,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 9,
+            "Width": 26,
+            "Height": 22,
+            "TextId": "__SingleUse_W41E",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "bestText",
+            "X": 11,
+            "Y": 17,
+            "Width": 22,
+            "Height": 10,
+            "TextId": "__SingleUse_UDFW",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "Best",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Tile3x3",
+        "X": 40,
+        "Y": 16,
+        "Width": 80,
+        "Height": 80,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "Width": 80,
+            "Height": 80,
+            "Color": {
+              "Red": 212,
+              "Green": 121,
+              "Blue": 61
+            },
+            "BorderColor": {
+              "Red": 119,
+              "Green": 110,
+              "Blue": 101
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 27,
+            "Y": 33,
+            "Width": 27,
+            "Height": 27,
+            "TextId": "__SingleUse_SD8W",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "TileText",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "Name": "2048",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "SelectedGameDesign",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F429/439",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../STM32F429I_DISCO_REV_D01.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts"
+    ]
+  },
+  "Version": "4.25.0",
+  "CreatedBy": "4.25.0"
+}
