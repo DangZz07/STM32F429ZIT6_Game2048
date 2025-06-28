@@ -13,6 +13,7 @@ public:
     virtual void tearDownScreen();
     virtual void handleGestureEvent(const GestureEvent& evt);
     virtual void handleKeyEvent(uint8_t key);
+    virtual void handleTickEvent();
     void spawnRandomTile();
     void navigateToGameOverScreen();
     void gotoGameOverScreen();

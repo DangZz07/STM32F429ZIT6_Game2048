@@ -5,6 +5,7 @@
 #include <cstdlib>     // srand, rand
 #include <ctime> 
 #include <gui/common/FrontendApplication.hpp>
+#include "stm32f4xx_hal.h"
 static uint32_t seed = 1;
 
 uint32_t myRand()
@@ -365,4 +366,122 @@ bool MainScreenView::isGameOver() // kiem tra xem con co the gop cac o lai voi n
 
     // Không còn nước đi hợp lệ
     return true;
+}
+//void MainScreenView::handleTickEvent()
+//{
+//    static uint32_t lastPressTime = 0;
+//    const uint32_t debounceDelay = 200; // Thời gian chống dội (ms)
+//    uint32_t currentTime = HAL_GetTick();
+//
+//    // Đọc trạng thái hiện tại của các chân GPIO
+//    uint8_t currentState = 0;
+//    currentState |= (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_SET ? 1 : 0); // PA0
+//    currentState |= (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_SET ? 2 : 0); // PA2
+//    currentState |= (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_4) == GPIO_PIN_SET ? 4 : 0); // PA4
+//    currentState |= (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6) == GPIO_PIN_SET ? 8 : 0); // PA6
+//
+//    static uint8_t lastState = 0; // Lưu trạng thái trước đó
+//
+//    // Chỉ thực thi nếu đã qua thời gian debounce và có thay đổi trạng thái
+//    if (currentTime - lastPressTime > debounceDelay)
+//    {
+//        // Kiểm tra từng nút, chỉ thực thi khi chuyển từ 0 sang 1
+//        if ((currentState & 1) && !(lastState & 1)) // PA0: Lên
+//        {
+//            moveUp();
+//            spawnRandomTile();
+//            lastPressTime = currentTime;
+//        }
+//        else if ((currentState & 2) && !(lastState & 2)) // PA2: Xuống
+//        {
+//            moveDown();
+//            spawnRandomTile();
+//            lastPressTime = currentTime;
+//        }
+//        else if ((currentState & 4) && !(lastState & 4)) // PA4: Trái
+//        {
+//            moveLeft();
+//            spawnRandomTile();
+//            lastPressTime = currentTime;
+//        }
+//        else if ((currentState & 8) && !(lastState & 8)) // PA6: Phải
+//        {
+//            moveRight();
+//            spawnRandomTile();
+//            lastPressTime = currentTime;
+//        }
+//
+//        // Cập nhật trạng thái cuối cùng
+//        lastState = currentState;
+//
+//        // Kiểm tra thua
+//        if (isGameOver())
+//        {
+//            navigateToGameOverScreen();
+//        }
+//    }
+//}
+void MainScreenView::handleTickEvent()
+{
+    static uint32_t lastPressTime = 0;
+    const uint32_t debounceDelay = 200; // Thời gian chống dội (ms)
+    uint32_t currentTime = HAL_GetTick();
+
+    // Đọc trạng thái hiện tại của các chân GPIO
+    uint8_t currentState = 0;
+    currentState |= (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_SET ? 1 : 0); // PA0: Lên
+    currentState |= (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_SET ? 2 : 0); // PA2: Xuống
+    currentState |= (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_4) == GPIO_PIN_SET ? 4 : 0); // PA4: Trái
+    currentState |= (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6) == GPIO_PIN_SET ? 8 : 0); // PA6: Phải
+
+    static uint8_t lastState = 0; // Lưu trạng thái trước đó
+
+    // Debug: In trạng thái các nút
+    if (currentTime - lastPressTime > debounceDelay)
+    {
+        printf("PA0: %d, PA2: %d, PA4: %d, PA6: %d\n",
+               (currentState & 1) ? 1 : 0,
+               (currentState & 2) ? 1 : 0,
+               (currentState & 4) ? 1 : 0,
+               (currentState & 8) ? 1 : 0);
+    }
+
+    // Chỉ thực thi nếu đã qua thời gian debounce và có thay đổi trạng thái từ 0 sang 1
+    if (currentTime - lastPressTime > debounceDelay)
+    {
+        // Kiểm tra từng nút
+        if ((currentState & 1) && !(lastState & 1)) // PA0: Lên
+        {
+            moveUp();
+            spawnRandomTile();
+            lastPressTime = currentTime;
+        }
+        else if ((currentState & 2) && !(lastState & 2)) // PA2: Xuống
+        {
+            moveDown();
+            spawnRandomTile();
+            lastPressTime = currentTime;
+        }
+        else if ((currentState & 4) && !(lastState & 4)) // PA4: Trái
+        {
+            moveLeft();
+            spawnRandomTile();
+            lastPressTime = currentTime;
+        }
+        else if ((currentState & 8) && !(lastState & 8)) // PA6: Phải
+        {
+            moveRight();
+            spawnRandomTile();
+            lastPressTime = currentTime;
+        }
+
+        // Cập nhật trạng thái cuối cùng
+        lastState = currentState;
+
+        // Kiểm tra thua
+        if (isGameOver())
+        {
+            navigateToGameOverScreen();
+        }
+    }
 }
