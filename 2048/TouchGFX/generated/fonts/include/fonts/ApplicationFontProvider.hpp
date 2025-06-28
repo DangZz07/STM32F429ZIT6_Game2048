@@ -21,19 +21,25 @@ struct Typography
     static const touchgfx::FontId NUMBER = 5;
     static const touchgfx::FontId BACK = 6;
     static const touchgfx::FontId RETRY = 7;
+    static const touchgfx::FontId SUPERMERGING = 8;
+    static const touchgfx::FontId TYPOGRAPHY_00 = 9;
+    static const touchgfx::FontId TYPOGRAPHY_01 = 10;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId TEXTTILE = 0; // verdanab_10_4bpp
-    static const touchgfx::FontId LARGE = 1;    // verdanab_25_4bpp
-    static const touchgfx::FontId BEST = 2;     // verdana_10_4bpp
-    static const touchgfx::FontId SCORE = 2;    // verdana_10_4bpp
-    static const touchgfx::FontId MENU = 3;     // verdanab_26_4bpp
-    static const touchgfx::FontId NUMBER = 4;   // verdanab_8_4bpp
-    static const touchgfx::FontId BACK = 5;     // verdanab_11_4bpp
-    static const touchgfx::FontId RETRY = 6;    // verdanab_24_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 7;
+    static const touchgfx::FontId TEXTTILE = 0;      // verdanab_10_4bpp
+    static const touchgfx::FontId LARGE = 1;         // verdanab_25_4bpp
+    static const touchgfx::FontId BEST = 2;          // verdana_10_4bpp
+    static const touchgfx::FontId SCORE = 2;         // verdana_10_4bpp
+    static const touchgfx::FontId MENU = 3;          // verdanab_26_4bpp
+    static const touchgfx::FontId NUMBER = 4;        // verdanab_8_4bpp
+    static const touchgfx::FontId BACK = 5;          // verdanab_11_4bpp
+    static const touchgfx::FontId RETRY = 6;         // verdanab_24_4bpp
+    static const touchgfx::FontId SUPERMERGING = 7;  // verdanab_15_4bpp
+    static const touchgfx::FontId TYPOGRAPHY_00 = 7; // verdanab_15_4bpp
+    static const touchgfx::FontId TYPOGRAPHY_01 = 2; // verdana_10_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 8;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

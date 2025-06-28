@@ -18,14 +18,6 @@ public:
     virtual ~SelectedGameDesignViewBase();
     virtual void setupScreen();
 
-    /*
-     * Virtual Action Handlers
-     */
-    virtual void onBtn5x5Clicked()
-    {
-        // Override and implement this function in SelectedGameDesign
-    }
-
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());

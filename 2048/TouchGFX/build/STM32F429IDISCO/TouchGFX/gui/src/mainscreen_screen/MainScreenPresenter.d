@@ -47,16 +47,20 @@ TouchGFX/build/STM32F429IDISCO/TouchGFX/gui/src/mainscreen_screen/MainScreenPres
  TouchGFX/gui/include/gui/mainscreen_screen/MainScreenPresenter.hpp \
  TouchGFX/gui/include/gui/model/ModelListener.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  TouchGFX/gui/include/gui/containers/Tile.hpp \
  TouchGFX/generated/gui_generated/include/gui_generated/containers/TileBase.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ TouchGFX/gui/include/gui/containers/Score.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/containers/ScoreBase.hpp \
+ TouchGFX/gui/include/gui/containers/Best.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/containers/BestBase.hpp
 
 TouchGFX/gui/include/gui/mainscreen_screen/MainScreenView.hpp:
 
@@ -152,17 +156,17 @@ TouchGFX/gui/include/gui/model/ModelListener.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
-
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 
 TouchGFX/gui/include/gui/containers/Tile.hpp:
 
@@ -171,3 +175,11 @@ TouchGFX/generated/gui_generated/include/gui_generated/containers/TileBase.hpp:
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+TouchGFX/gui/include/gui/containers/Score.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/containers/ScoreBase.hpp:
+
+TouchGFX/gui/include/gui/containers/Best.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/containers/BestBase.hpp:

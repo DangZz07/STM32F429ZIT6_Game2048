@@ -6,20 +6,86 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="Letter" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">%%</Translation>
+      </Text>
+      <Text Id="__SingleUse_94BW" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YD0K" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">LetterMerging</Translation>
+      </Text>
+      <Text Id="__SingleUse_1BV9" Alignment="Left" TypographyId="back">
+        <Translation Language="GB">Menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_1OP4" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">New Game</Translation>
+      </Text>
+      <Text Id="__SingleUse_V7OD" Alignment="Center" TypographyId="SuperMerging">
+        <Translation Language="GB">SuperMerging</Translation>
+      </Text>
+      <Text Id="__SingleUse_SV2C" Alignment="Left" TypographyId="back">
+        <Translation Language="GB">Menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_4QF9" Alignment="Left" TypographyId="back">
+        <Translation Language="GB">Menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_AQ0C" Alignment="Left" TypographyId="back">
+        <Translation Language="GB">Menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_P1QL" Alignment="Left" TypographyId="back">
+        <Translation Language="GB">Menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_5N6N" Alignment="Left" TypographyId="TextTile">
+        <Translation Language="GB">Score    Best</Translation>
+      </Text>
+      <Text Id="__SingleUse_R15Q" Alignment="Center" TypographyId="Best">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CAYP" Alignment="Center" TypographyId="Score">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_318R" Alignment="Left" TypographyId="back">
+        <Translation Language="GB">Back</Translation>
+      </Text>
+      <Text Id="__SingleUse_4PZ6" Alignment="Left" TypographyId="Retry">
+        <Translation Language="GB">Welcome!</Translation>
+      </Text>
+      <Text Id="__SingleUse_KQ4M" Alignment="Left" TypographyId="Retry">
+        <Translation Language="GB">Retry</Translation>
+      </Text>
+      <Text Id="__SingleUse_OLMF" Alignment="Left" TypographyId="SuperMerging">
+        <Translation Language="GB">Letter</Translation>
+      </Text>
+      <Text Id="__SingleUse_NQUE" Alignment="Left" TypographyId="SuperMerging">
+        <Translation Language="GB">Classic</Translation>
+      </Text>
+      <Text Id="__SingleUse_X5PN" Alignment="Left" TypographyId="SuperMerging">
+        <Translation Language="GB">SuperMerging</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y9X3" Alignment="Center" TypographyId="TextTile">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_LY3Z" Alignment="Left" TypographyId="back">
+        <Translation Language="GB">Back</Translation>
+      </Text>
+      <Text Id="__SingleUse_1E62" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">4096</Translation>
+      </Text>
       <Text Id="__SingleUse_7DYD" Alignment="Center" TypographyId="Retry">
         <Translation Language="GB">Menu</Translation>
       </Text>
       <Text Id="__SingleUse_GMIQ" Alignment="Left" TypographyId="back">
-        <Translation Language="GB">Menu</Translation>
+        <Translation Language="GB">Back</Translation>
       </Text>
       <Text Id="__SingleUse_SD8W" Alignment="Center" TypographyId="TextTile">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_WUUP" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">2048</Translation>
+        <Translation Language="GB">512</Translation>
       </Text>
       <Text Id="__SingleUse_8CYV" Alignment="Center" TypographyId="Menu">
-        <Translation Language="GB">Menu</Translation>
+        <Translation Language="GB">Classic</Translation>
       </Text>
       <Text Id="__SingleUse_Z3VS" Alignment="Left" TypographyId="TextTile">
         <Translation Language="GB">5x5</Translation>
@@ -77,5 +143,8 @@
     <Typography Id="number" Font="verdanab.ttf" Size="8" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="back" Font="verdanab.ttf" Size="11" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Retry" Font="verdanab.ttf" Size="24" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="SuperMerging" Font="verdanab.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="verdanab.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_01" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="A-Z" />
   </Typographies>
 </TextDatabase>

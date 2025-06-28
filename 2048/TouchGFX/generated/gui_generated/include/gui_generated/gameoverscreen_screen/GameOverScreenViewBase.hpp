@@ -8,8 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/gameoverscreen_screen/GameOverScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class GameOverScreenViewBase : public touchgfx::View<GameOverScreenPresenter>
 {
@@ -28,9 +29,23 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButton2;
+    touchgfx::TextAreaWithOneWildcard bestText;
+    touchgfx::TextAreaWithOneWildcard scoreText;
     touchgfx::TextArea textArea1;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  menu;
     touchgfx::TextArea textArea2_1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1;
+    touchgfx::TextArea textArea2;
+    touchgfx::TextArea textArea3;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t BESTTEXT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar bestTextBuffer[BESTTEXT_SIZE];
+    static const uint16_t SCORETEXT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar scoreTextBuffer[SCORETEXT_SIZE];
 
 private:
 

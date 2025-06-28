@@ -17,8 +17,11 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoSelectedGameDesignScreenNoTransition();
+        gotoChosing_modeScreenNoTransition();
     }
+
+    // Screen5x5_letterMerging
+    void gotoScreen5x5_letterMergingScreenSlideTransitionEast();
 
     // MainScreen
     void gotoMainScreenScreenCoverTransitionEast();
@@ -27,19 +30,35 @@ public:
     void gotoGameOverScreenScreenSlideTransitionEast();
 
     // SelectedGameDesign
-    void gotoSelectedGameDesignScreenNoTransition();
+    void gotoSelectedGameDesignScreenCoverTransitionEast();
 
     void gotoSelectedGameDesignScreenBlockTransition();
 
-    void gotoSelectedGameDesignScreenCoverTransitionEast();
+    void gotoSelectedGameDesignScreenSlideTransitionEast();
 
     // Screen3x3
     void gotoScreen3x3ScreenCoverTransitionEast();
+
+    // Screen5x5_superMerging
+    void gotoScreen5x5_superMergingScreenSlideTransitionEast();
+
+    // Screen5x5
+    void gotoScreen5x5ScreenSlideTransitionEast();
+
+    // Chosing_mode
+    void gotoChosing_modeScreenNoTransition();
+
+    void gotoChosing_modeScreenWipeTransitionEast();
+
+    void gotoChosing_modeScreenBlockTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
+
+    // Screen5x5_letterMerging
+    void gotoScreen5x5_letterMergingScreenSlideTransitionEastImpl();
 
     // MainScreen
     void gotoMainScreenScreenCoverTransitionEastImpl();
@@ -48,14 +67,27 @@ protected:
     void gotoGameOverScreenScreenSlideTransitionEastImpl();
 
     // SelectedGameDesign
-    void gotoSelectedGameDesignScreenNoTransitionImpl();
+    void gotoSelectedGameDesignScreenCoverTransitionEastImpl();
 
     void gotoSelectedGameDesignScreenBlockTransitionImpl();
 
-    void gotoSelectedGameDesignScreenCoverTransitionEastImpl();
+    void gotoSelectedGameDesignScreenSlideTransitionEastImpl();
 
     // Screen3x3
     void gotoScreen3x3ScreenCoverTransitionEastImpl();
+
+    // Screen5x5_superMerging
+    void gotoScreen5x5_superMergingScreenSlideTransitionEastImpl();
+
+    // Screen5x5
+    void gotoScreen5x5ScreenSlideTransitionEastImpl();
+
+    // Chosing_mode
+    void gotoChosing_modeScreenNoTransitionImpl();
+
+    void gotoChosing_modeScreenWipeTransitionEastImpl();
+
+    void gotoChosing_modeScreenBlockTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

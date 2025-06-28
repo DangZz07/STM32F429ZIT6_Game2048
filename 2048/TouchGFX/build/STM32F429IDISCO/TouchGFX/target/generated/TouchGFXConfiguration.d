@@ -36,11 +36,8 @@ TouchGFX/build/STM32F429IDISCO/TouchGFX/target/generated/TouchGFXConfiguration.o
  Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
- TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
- TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
- Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
- Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
  Middlewares/ST/touchgfx/framework/include/platform/driver/button/ButtonController.hpp \
@@ -50,6 +47,14 @@ TouchGFX/build/STM32F429IDISCO/TouchGFX/target/generated/TouchGFXConfiguration.o
  Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Atomic.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp \
+ TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
+ Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
+ Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  TouchGFX/gui/include/gui/model/Model.hpp \
  TouchGFX/gui/include/gui/mainscreen_screen/MainScreenView.hpp \
  TouchGFX/generated/gui_generated/include/gui_generated/mainscreen_screen/MainScreenViewBase.hpp \
@@ -57,14 +62,55 @@ TouchGFX/build/STM32F429IDISCO/TouchGFX/target/generated/TouchGFXConfiguration.o
  TouchGFX/gui/include/gui/mainscreen_screen/MainScreenPresenter.hpp \
  TouchGFX/gui/include/gui/model/ModelListener.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  TouchGFX/gui/include/gui/containers/Tile.hpp \
  TouchGFX/generated/gui_generated/include/gui_generated/containers/TileBase.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ TouchGFX/gui/include/gui/containers/Score.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/containers/ScoreBase.hpp \
+ TouchGFX/gui/include/gui/containers/Best.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/containers/BestBase.hpp \
+ TouchGFX/gui/include/gui/gameoverscreen_screen/GameOverScreenView.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/gameoverscreen_screen/GameOverScreenViewBase.hpp \
+ TouchGFX/gui/include/gui/gameoverscreen_screen/GameOverScreenPresenter.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ TouchGFX/gui/include/gui/selectedgamedesign_screen/SelectedGameDesignView.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/selectedgamedesign_screen/SelectedGameDesignViewBase.hpp \
+ TouchGFX/gui/include/gui/selectedgamedesign_screen/SelectedGameDesignPresenter.hpp \
+ TouchGFX/gui/include/gui/screen3x3_screen/Screen3x3View.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/screen3x3_screen/Screen3x3ViewBase.hpp \
+ TouchGFX/gui/include/gui/screen3x3_screen/Screen3x3Presenter.hpp \
+ TouchGFX/gui/include/gui/containers/Tile3x3.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/containers/Tile3x3Base.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
+ TouchGFX/gui/include/gui/screen5x5_screen/Screen5x5View.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/screen5x5_screen/Screen5x5ViewBase.hpp \
+ TouchGFX/gui/include/gui/screen5x5_screen/Screen5x5Presenter.hpp \
+ TouchGFX/gui/include/gui/containers/Tile5x5.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/containers/Tile5x5Base.hpp \
+ TouchGFX/gui/include/gui/chosing_mode_screen/Chosing_modeView.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/chosing_mode_screen/Chosing_modeViewBase.hpp \
+ TouchGFX/gui/include/gui/chosing_mode_screen/Chosing_modePresenter.hpp \
  TouchGFX/generated/images/include/BitmapDatabase.hpp \
  TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/VectorFontRendererImpl.hpp \
@@ -180,15 +226,9 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
 
-TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
+Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:
 
-TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
-
-Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
-
-Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
+Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:
 
@@ -208,6 +248,22 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp:
+
+TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
+
+Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
+
+Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
+
 TouchGFX/gui/include/gui/model/Model.hpp:
 
 TouchGFX/gui/include/gui/mainscreen_screen/MainScreenView.hpp:
@@ -222,13 +278,13 @@ TouchGFX/gui/include/gui/model/ModelListener.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 
 TouchGFX/gui/include/gui/containers/Tile.hpp:
 
@@ -237,6 +293,88 @@ TouchGFX/generated/gui_generated/include/gui_generated/containers/TileBase.hpp:
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+TouchGFX/gui/include/gui/containers/Score.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/containers/ScoreBase.hpp:
+
+TouchGFX/gui/include/gui/containers/Best.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/containers/BestBase.hpp:
+
+TouchGFX/gui/include/gui/gameoverscreen_screen/GameOverScreenView.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/gameoverscreen_screen/GameOverScreenViewBase.hpp:
+
+TouchGFX/gui/include/gui/gameoverscreen_screen/GameOverScreenPresenter.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+
+TouchGFX/gui/include/gui/selectedgamedesign_screen/SelectedGameDesignView.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/selectedgamedesign_screen/SelectedGameDesignViewBase.hpp:
+
+TouchGFX/gui/include/gui/selectedgamedesign_screen/SelectedGameDesignPresenter.hpp:
+
+TouchGFX/gui/include/gui/screen3x3_screen/Screen3x3View.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/screen3x3_screen/Screen3x3ViewBase.hpp:
+
+TouchGFX/gui/include/gui/screen3x3_screen/Screen3x3Presenter.hpp:
+
+TouchGFX/gui/include/gui/containers/Tile3x3.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/containers/Tile3x3Base.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+
+TouchGFX/gui/include/gui/screen5x5_screen/Screen5x5View.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/screen5x5_screen/Screen5x5ViewBase.hpp:
+
+TouchGFX/gui/include/gui/screen5x5_screen/Screen5x5Presenter.hpp:
+
+TouchGFX/gui/include/gui/containers/Tile5x5.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/containers/Tile5x5Base.hpp:
+
+TouchGFX/gui/include/gui/chosing_mode_screen/Chosing_modeView.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/chosing_mode_screen/Chosing_modeViewBase.hpp:
+
+TouchGFX/gui/include/gui/chosing_mode_screen/Chosing_modePresenter.hpp:
 
 TouchGFX/generated/images/include/BitmapDatabase.hpp:
 

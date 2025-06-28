@@ -4,6 +4,7 @@
 #include <gui_generated/mainscreen_screen/MainScreenViewBase.hpp>
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
 #include <gui/containers/Tile.hpp>
+#include <stdint.h>
 class MainScreenView : public MainScreenViewBase
 {
 public:
@@ -17,15 +18,19 @@ public:
     void navigateToGameOverScreen();
     void gotoGameOverScreen();
     bool isGameOver();
+    void saveGridState();//Hàm lưu trạng thái hiện tại
+    bool hasGridChanged();
 protected:
      // THÊM: Khai báo mảng 4x4 chứa các Tile
     Tile* tiles[4][4];
+    uint16_t gridBeforeMove[4][4];
     void moveLeft();
     void moveRight();
     void moveUp();
     void moveDown();
     uint32_t score = 0;
     uint32_t bestScore = 0;
+    uint32_t myRand();
     void updateScoreText();
 };
 

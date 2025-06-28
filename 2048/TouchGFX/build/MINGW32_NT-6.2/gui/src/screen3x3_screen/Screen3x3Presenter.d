@@ -74,7 +74,9 @@ build/MINGW32_NT-6.2/gui/src/screen3x3_screen/Screen3x3Presenter.o: \
  gui/include/gui/containers/Best.hpp \
  generated/gui_generated/include/gui_generated/containers/BestBase.hpp \
  gui/include/gui/containers/Tile3x3.hpp \
- generated/gui_generated/include/gui_generated/containers/Tile3x3Base.hpp
+ generated/gui_generated/include/gui_generated/containers/Tile3x3Base.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp
 
 gui/include/gui/screen3x3_screen/Screen3x3View.hpp:
 
@@ -225,3 +227,7 @@ generated/gui_generated/include/gui_generated/containers/BestBase.hpp:
 gui/include/gui/containers/Tile3x3.hpp:
 
 generated/gui_generated/include/gui_generated/containers/Tile3x3Base.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:

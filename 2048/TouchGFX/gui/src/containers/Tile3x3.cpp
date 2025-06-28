@@ -5,6 +5,9 @@ Tile3x3::Tile3x3()
 {
 
 }
+
+
+
 void Tile3x3::setValue(uint16_t value)
 {
     if (value == 0)
@@ -43,6 +46,7 @@ void Tile3x3::initialize()
 {
     Tile3x3Base::initialize();
     textArea1.setWildcard(textArea1Buffer);
+    
 }
 uint16_t Tile3x3::getValue() const
 {
@@ -50,4 +54,39 @@ uint16_t Tile3x3::getValue() const
         return 0;
 
     return touchgfx::Unicode::atoi(textArea1Buffer);
+}
+void Tile3x3::animateSpawn()
+{
+    currentStep = 0;
+
+    // bắt đầu nhỏ
+    setWidthHeight(10, 10);
+    moveTo(centerX - 5, centerY - 5);
+    setVisible(true);
+    boxWithBorder1.setVisible(true);
+    textArea1.setVisible(true);
+
+    invalidate();
+    Application::getInstance()->registerTimerWidget(this); // gọi tickEvent
+}
+
+void Tile3x3::handleTickEvent()
+{
+    if (currentStep >= totalSteps)
+    {
+        // Hoàn tất animation
+        setWidthHeight(80, 80);
+        moveTo(centerX - 40, centerY - 40);
+        invalidate();
+        Application::getInstance()->unregisterTimerWidget(this);
+        return;
+    }
+
+    int size = 10 + ((80 - 10) * currentStep) / totalSteps;
+    int offset = size / 2;
+    setWidthHeight(size, size);
+    moveTo(centerX - offset, centerY - offset);
+    invalidate();
+
+    currentStep++;
 }

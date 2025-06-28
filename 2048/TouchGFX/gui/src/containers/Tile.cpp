@@ -54,3 +54,38 @@ uint16_t Tile::getValue() const
 
     return touchgfx::Unicode::atoi(textArea1Buffer);
 }
+void Tile::animateSpawn()
+{
+    currentStep = 0;
+
+    // bắt đầu nhỏ
+    setWidthHeight(10, 10);
+    moveTo(centerX - 5, centerY - 5);
+    setVisible(true);
+    boxWithBorder1.setVisible(true);
+    textArea1.setVisible(true);
+
+    invalidate();
+    Application::getInstance()->registerTimerWidget(this); // gọi tickEvent
+}
+
+void Tile::handleTickEvent()
+{
+    if (currentStep >= totalSteps)
+    {
+        // Hoàn tất animation
+        setWidthHeight(60, 60);
+        moveTo(centerX - 30, centerY - 30);
+        invalidate();
+        Application::getInstance()->unregisterTimerWidget(this);
+        return;
+    }
+
+    int size = 10 + ((60 - 10) * currentStep) / totalSteps;
+    int offset = size / 2;
+    setWidthHeight(size, size);
+    moveTo(centerX - offset, centerY - offset);
+    invalidate();
+
+    currentStep++;
+}

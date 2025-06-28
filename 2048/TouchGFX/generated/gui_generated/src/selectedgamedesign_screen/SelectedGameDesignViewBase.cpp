@@ -13,7 +13,7 @@ SelectedGameDesignViewBase::SelectedGameDesignViewBase() :
     add(__background);
 
     box1.setPosition(0, 0, 240, 320);
-    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(112, 84, 84));
     add(box1);
 
     btn3x3.setBoxWithBorderPosition(0, 0, 48, 47);
@@ -58,7 +58,7 @@ SelectedGameDesignViewBase::SelectedGameDesignViewBase() :
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_A5N6));
     add(textArea1);
 
-    textArea2.setXY(80, 23);
+    textArea2.setXY(71, 25);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8CYV));
@@ -94,8 +94,8 @@ void SelectedGameDesignViewBase::flexButtonCallbackHandler(const touchgfx::Abstr
     if (&src == &btn5x5)
     {
         //Interaction3
-        //When btn5x5 clicked call virtual function
-        //Call onBtn5x5Clicked
-        onBtn5x5Clicked();
+        //When btn5x5 clicked change screen to Screen5x5
+        //Go to Screen5x5 with screen transition towards East
+        application().gotoScreen5x5ScreenSlideTransitionEast();
     }
 }

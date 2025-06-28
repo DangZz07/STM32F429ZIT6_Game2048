@@ -3,11 +3,12 @@
 /*********************************************************************************/
 #include <gui_generated/mainscreen_screen/MainScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 MainScreenViewBase::MainScreenViewBase() :
-    buttonCallback(this, &MainScreenViewBase::buttonCallbackHandler)
+    buttonCallback(this, &MainScreenViewBase::buttonCallbackHandler),
+    flexButtonCallback(this, &MainScreenViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -17,12 +18,6 @@ MainScreenViewBase::MainScreenViewBase() :
     box2.setColor(touchgfx::Color::getColorFromRGB(119, 110, 101));
     add(box2);
 
-    textArea1.setXY(13, 6);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(227, 110, 27));
-    textArea1.setLinespacing(5);
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MQNV));
-    add(textArea1);
-
     buttonWithLabel1.setXY(13, 37);
     buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_MEDIUM_ROUNDED_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_MEDIUM_ROUNDED_PRESSED_ID));
     buttonWithLabel1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2ES5));
@@ -30,6 +25,42 @@ MainScreenViewBase::MainScreenViewBase() :
     buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel1.setAction(buttonCallback);
     add(buttonWithLabel1);
+
+    box3.setPosition(0, 0, 240, 80);
+    box3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    add(box3);
+
+    flexButton1_1_1.setBoxWithBorderPosition(0, 0, 65, 35);
+    flexButton1_1_1.setBorderSize(5);
+    flexButton1_1_1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton1_1_1.setAction(flexButtonCallback);
+    flexButton1_1_1.setPosition(46, 38, 65, 35);
+    add(flexButton1_1_1);
+
+    flexButton1_1.setBoxWithBorderPosition(0, 0, 65, 35);
+    flexButton1_1.setBorderSize(5);
+    flexButton1_1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton1_1.setAction(flexButtonCallback);
+    flexButton1_1.setPosition(125, 37, 65, 35);
+    add(flexButton1_1);
+
+    textArea2_1_1.setXY(62, 50);
+    textArea2_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2_1_1.setLinespacing(0);
+    textArea2_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_P1QL));
+    add(textArea2_1_1);
+
+    textArea2_1.setXY(143, 49);
+    textArea2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2_1.setLinespacing(0);
+    textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_318R));
+    add(textArea2_1);
+
+    textArea1.setXY(13, 6);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(227, 110, 27));
+    textArea1.setLinespacing(5);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MQNV));
+    add(textArea1);
 
     tile00.setXY(0, 80);
     add(tile00);
@@ -125,5 +156,23 @@ void MainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //When buttonWithLabel1 clicked change screen to GameOverScreen
         //Go to GameOverScreen with screen transition towards East
         application().gotoGameOverScreenScreenSlideTransitionEast();
+    }
+}
+
+void MainScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &flexButton1_1)
+    {
+        //Interaction3
+        //When flexButton1_1 clicked change screen to SelectedGameDesign
+        //Go to SelectedGameDesign with screen transition towards East
+        application().gotoSelectedGameDesignScreenCoverTransitionEast();
+    }
+    if (&src == &flexButton1_1_1)
+    {
+        //Interaction4
+        //When flexButton1_1_1 clicked change screen to Chosing_mode
+        //Go to Chosing_mode with screen transition towards East
+        application().gotoChosing_modeScreenWipeTransitionEast();
     }
 }

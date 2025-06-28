@@ -232,6 +232,54 @@
     <Filter Include="Source Files\generated\gui_generated\screen3x3_screen">
       <UniqueIdentifier>0732C572-EE9E-2E0B-F263-5CBA7128C614</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\screen5x5_screen">
+      <UniqueIdentifier>4154218A-8BE1-969D-24FB-A78A75ACDD6D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen5x5_screen">
+      <UniqueIdentifier>B9CAE8CF-131F-BD4D-B753-B85209E559C4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen5x5_screen">
+      <UniqueIdentifier>39CE9544-6D02-450F-EB71-2CC9D5D9A301</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen5x5_screen">
+      <UniqueIdentifier>4CF6C97B-A1AB-7135-1155-D3469ED9712D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\chosing_mode_screen">
+      <UniqueIdentifier>42FD40A3-370B-18CC-5745-F336300CB882</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\chosing_mode_screen">
+      <UniqueIdentifier>5FDF1471-A904-C2A3-F8A5-CF7CA8BAAD77</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\chosing_mode_screen">
+      <UniqueIdentifier>C2C5A74F-7CC7-D5F7-F917-3EE189BCF392</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\chosing_mode_screen">
+      <UniqueIdentifier>9621D0D1-AB20-66C7-7A9D-FFC419507491</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen5x5_supermerging_screen">
+      <UniqueIdentifier>6B4358D6-CDAD-5892-5B2A-8821E1F9F33F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen5x5_supermerging_screen">
+      <UniqueIdentifier>DF8C9A52-EAEE-65F8-9A4E-D6660722F645</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen5x5_supermerging_screen">
+      <UniqueIdentifier>E751521E-0BE1-4CF4-EBE4-75EF3E1D621C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen5x5_supermerging_screen">
+      <UniqueIdentifier>7DCDD6A6-5310-F11B-827E-5FEB1AB2C01E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen5x5_lettermerging_screen">
+      <UniqueIdentifier>B7246622-2D1A-BFA2-1441-19534B34AF08</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen5x5_lettermerging_screen">
+      <UniqueIdentifier>A0F56EC8-D7B5-A973-C6A7-A04A0983A5AE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen5x5_lettermerging_screen">
+      <UniqueIdentifier>BBA328A7-B449-6862-30CB-5031D06C5AF6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen5x5_lettermerging_screen">
+      <UniqueIdentifier>D7CB090E-7FAD-B39B-5E5A-165C45CE5577</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -276,9 +324,6 @@
     <ClCompile Include="..\..\gui\src\containers\Tile.cpp">
       <Filter>Source Files\gui\containers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\TileBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\gui\src\gameoverscreen_screen\GameOverScreenPresenter.cpp">
       <Filter>Source Files\gui\gameoverscreen_screen</Filter>
     </ClCompile>
@@ -322,6 +367,60 @@
       <Filter>Source Files\gui\containers</Filter>
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\Tile3x3Base.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen5x5_screen\Screen5x5Presenter.cpp">
+      <Filter>Source Files\gui\screen5x5_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen5x5_screen\Screen5x5View.cpp">
+      <Filter>Source Files\gui\screen5x5_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen5x5_screen\Screen5x5ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen5x5_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\Tile5x5.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\Tile5x5Base.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\TileBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\chosing_mode_screen\Chosing_modePresenter.cpp">
+      <Filter>Source Files\gui\chosing_mode_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\chosing_mode_screen\Chosing_modeView.cpp">
+      <Filter>Source Files\gui\chosing_mode_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\chosing_mode_screen\Chosing_modeViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\chosing_mode_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\GameGlobal.cpp">
+      <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen5x5_supermerging_screen\Screen5x5_superMergingPresenter.cpp">
+      <Filter>Source Files\gui\screen5x5_supermerging_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen5x5_supermerging_screen\Screen5x5_superMergingView.cpp">
+      <Filter>Source Files\gui\screen5x5_supermerging_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen5x5_supermerging_screen\Screen5x5_superMergingViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen5x5_supermerging_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen5x5_lettermerging_screen\Screen5x5_letterMergingPresenter.cpp">
+      <Filter>Source Files\gui\screen5x5_lettermerging_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen5x5_lettermerging_screen\Screen5x5_letterMergingView.cpp">
+      <Filter>Source Files\gui\screen5x5_lettermerging_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen5x5_lettermerging_screen\Screen5x5_letterMergingViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen5x5_lettermerging_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\Tile_letter.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\Tile_letterBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
   </ItemGroup>
@@ -778,9 +877,6 @@
     <ClInclude Include="..\..\gui\include\gui\containers\Tile.hpp">
       <Filter>Header Files\gui\containers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\TileBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\gameoverscreen_screen\GameOverScreenPresenter.hpp">
       <Filter>Header Files\gui\gameoverscreen_screen</Filter>
     </ClInclude>
@@ -824,6 +920,60 @@
       <Filter>Header Files\gui\containers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\Tile3x3Base.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_screen\Screen5x5Presenter.hpp">
+      <Filter>Header Files\gui\screen5x5_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_screen\Screen5x5View.hpp">
+      <Filter>Header Files\gui\screen5x5_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen5x5_screen\Screen5x5ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen5x5_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\Tile5x5.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\Tile5x5Base.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\TileBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\chosing_mode_screen\Chosing_modePresenter.hpp">
+      <Filter>Header Files\gui\chosing_mode_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\chosing_mode_screen\Chosing_modeView.hpp">
+      <Filter>Header Files\gui\chosing_mode_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\chosing_mode_screen\Chosing_modeViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\chosing_mode_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\GameGlobal.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_supermerging_screen\Screen5x5_superMergingPresenter.hpp">
+      <Filter>Header Files\gui\screen5x5_supermerging_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_supermerging_screen\Screen5x5_superMergingView.hpp">
+      <Filter>Header Files\gui\screen5x5_supermerging_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen5x5_supermerging_screen\Screen5x5_superMergingViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen5x5_supermerging_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_lettermerging_screen\Screen5x5_letterMergingPresenter.hpp">
+      <Filter>Header Files\gui\screen5x5_lettermerging_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_lettermerging_screen\Screen5x5_letterMergingView.hpp">
+      <Filter>Header Files\gui\screen5x5_lettermerging_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen5x5_lettermerging_screen\Screen5x5_letterMergingViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen5x5_lettermerging_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\Tile_letter.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\Tile_letterBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>

@@ -12,6 +12,7 @@ extern touchgfx::GeneratedFont& getFont_verdanab_26_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdanab_8_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdanab_11_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdanab_24_4bpp();
+extern touchgfx::GeneratedFont& getFont_verdanab_15_4bpp();
 
 const touchgfx::Font* touchgfx_fonts[] = {
     &(getFont_verdanab_10_4bpp()),
@@ -20,7 +21,8 @@ const touchgfx::Font* touchgfx_fonts[] = {
     &(getFont_verdanab_26_4bpp()),
     &(getFont_verdanab_8_4bpp()),
     &(getFont_verdanab_11_4bpp()),
-    &(getFont_verdanab_24_4bpp())
+    &(getFont_verdanab_24_4bpp()),
+    &(getFont_verdanab_15_4bpp())
 };
 
 extern const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[];
@@ -28,6 +30,28 @@ extern const touchgfx::TypedText::TypedTextData* const typedTextDatabaseArray[];
 
 TEXT_LOCATION_FLASH_PRAGMA
 const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 7, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 7, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 7, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 7, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 7, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 6, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
@@ -103,6 +127,9 @@ void resetFont(touchgfx::FontId fontId)
         break;
     case 6:
         touchgfx_fonts[6] = &(getFont_verdanab_24_4bpp());
+        break;
+    case 7:
+        touchgfx_fonts[7] = &(getFont_verdanab_15_4bpp());
         break;
     }
 }

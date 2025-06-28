@@ -9,6 +9,8 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
+#include <gui/screen5x5_lettermerging_screen/Screen5x5_letterMergingView.hpp>
+#include <gui/screen5x5_lettermerging_screen/Screen5x5_letterMergingPresenter.hpp>
 #include <gui/mainscreen_screen/MainScreenView.hpp>
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
 #include <gui/gameoverscreen_screen/GameOverScreenView.hpp>
@@ -17,6 +19,12 @@
 #include <gui/selectedgamedesign_screen/SelectedGameDesignPresenter.hpp>
 #include <gui/screen3x3_screen/Screen3x3View.hpp>
 #include <gui/screen3x3_screen/Screen3x3Presenter.hpp>
+#include <gui/screen5x5_supermerging_screen/Screen5x5_superMergingView.hpp>
+#include <gui/screen5x5_supermerging_screen/Screen5x5_superMergingPresenter.hpp>
+#include <gui/screen5x5_screen/Screen5x5View.hpp>
+#include <gui/screen5x5_screen/Screen5x5Presenter.hpp>
+#include <gui/chosing_mode_screen/Chosing_modeView.hpp>
+#include <gui/chosing_mode_screen/Chosing_modePresenter.hpp>
 
 using namespace touchgfx;
 
@@ -36,6 +44,19 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
 /*
  * Screen Transition Declarations
  */
+
+// Screen5x5_letterMerging
+
+void FrontendApplicationBase::gotoScreen5x5_letterMergingScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoScreen5x5_letterMergingScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoScreen5x5_letterMergingScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<Screen5x5_letterMergingView, Screen5x5_letterMergingPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
 
 // MainScreen
 
@@ -65,15 +86,15 @@ void FrontendApplicationBase::gotoGameOverScreenScreenSlideTransitionEastImpl()
 
 // SelectedGameDesign
 
-void FrontendApplicationBase::gotoSelectedGameDesignScreenNoTransition()
+void FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEast()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoSelectedGameDesignScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEastImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoSelectedGameDesignScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEastImpl()
 {
-    touchgfx::makeTransition<SelectedGameDesignView, SelectedGameDesignPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<SelectedGameDesignView, SelectedGameDesignPresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 void FrontendApplicationBase::gotoSelectedGameDesignScreenBlockTransition()
@@ -87,15 +108,15 @@ void FrontendApplicationBase::gotoSelectedGameDesignScreenBlockTransitionImpl()
     touchgfx::makeTransition<SelectedGameDesignView, SelectedGameDesignPresenter, touchgfx::BlockTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-void FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEast()
+void FrontendApplicationBase::gotoSelectedGameDesignScreenSlideTransitionEast()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEastImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoSelectedGameDesignScreenSlideTransitionEastImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEastImpl()
+void FrontendApplicationBase::gotoSelectedGameDesignScreenSlideTransitionEastImpl()
 {
-    touchgfx::makeTransition<SelectedGameDesignView, SelectedGameDesignPresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<SelectedGameDesignView, SelectedGameDesignPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // Screen3x3
@@ -109,4 +130,65 @@ void FrontendApplicationBase::gotoScreen3x3ScreenCoverTransitionEast()
 void FrontendApplicationBase::gotoScreen3x3ScreenCoverTransitionEastImpl()
 {
     touchgfx::makeTransition<Screen3x3View, Screen3x3Presenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Screen5x5_superMerging
+
+void FrontendApplicationBase::gotoScreen5x5_superMergingScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoScreen5x5_superMergingScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoScreen5x5_superMergingScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<Screen5x5_superMergingView, Screen5x5_superMergingPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Screen5x5
+
+void FrontendApplicationBase::gotoScreen5x5ScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoScreen5x5ScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoScreen5x5ScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<Screen5x5View, Screen5x5Presenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Chosing_mode
+
+void FrontendApplicationBase::gotoChosing_modeScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoChosing_modeScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoChosing_modeScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Chosing_modeView, Chosing_modePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoChosing_modeScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoChosing_modeScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoChosing_modeScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<Chosing_modeView, Chosing_modePresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoChosing_modeScreenBlockTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoChosing_modeScreenBlockTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoChosing_modeScreenBlockTransitionImpl()
+{
+    touchgfx::makeTransition<Chosing_modeView, Chosing_modePresenter, touchgfx::BlockTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

@@ -17,16 +17,22 @@ public:
     void navigateToGameOverScreen();
     void gotoGameOverScreen();
     bool isGameOver();
+    void saveGridState();//Hàm lưu trạng thái hiện tại
+    bool hasGridChanged();//Hàm kiểm tra xem lưới có thay đổi không
+
 protected:
      // THÊM: Khai báo mảng 4x4 chứa các Tile
     Tile3x3* tiles[3][3];
+    uint16_t gridBeforeMove[3][3];
     void moveLeft();
     void moveRight();
     void moveUp();
     void moveDown();
     uint32_t score = 0;
     uint32_t bestScore = 0;
+    uint32_t myRand();
     void updateScoreText();
+    void moveTileAnimated(int fromRow, int fromCol, int toRow, int toCol);
 };
 
 #endif // SCREEN3X3VIEW_HPP

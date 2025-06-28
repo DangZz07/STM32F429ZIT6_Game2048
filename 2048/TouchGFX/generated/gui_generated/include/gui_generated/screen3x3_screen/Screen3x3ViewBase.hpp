@@ -9,9 +9,9 @@
 #include <gui/screen3x3_screen/Screen3x3Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/Score.hpp>
 #include <gui/containers/Best.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/Tile3x3.hpp>
 
 class Screen3x3ViewBase : public touchgfx::View<Screen3x3Presenter>
@@ -30,7 +30,9 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1_1_1;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1_1;
+    touchgfx::TextArea textArea2_1_1;
     Score scoreContainer;
     Best bestContainer;
     touchgfx::Box box2;

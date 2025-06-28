@@ -9,13 +9,16 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
+#include <touchgfx/transitions/WipeTransition.hpp>
 #include <touchgfx/transitions/SlideTransition.hpp>
-#include <touchgfx/transitions/BlockTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/BlockTransition.hpp>
 
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
+#include <gui/screen5x5_lettermerging_screen/Screen5x5_letterMergingView.hpp>
+#include <gui/screen5x5_lettermerging_screen/Screen5x5_letterMergingPresenter.hpp>
 #include <gui/mainscreen_screen/MainScreenView.hpp>
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
 #include <gui/gameoverscreen_screen/GameOverScreenView.hpp>
@@ -24,6 +27,12 @@
 #include <gui/selectedgamedesign_screen/SelectedGameDesignPresenter.hpp>
 #include <gui/screen3x3_screen/Screen3x3View.hpp>
 #include <gui/screen3x3_screen/Screen3x3Presenter.hpp>
+#include <gui/screen5x5_supermerging_screen/Screen5x5_superMergingView.hpp>
+#include <gui/screen5x5_supermerging_screen/Screen5x5_superMergingPresenter.hpp>
+#include <gui/screen5x5_screen/Screen5x5View.hpp>
+#include <gui/screen5x5_screen/Screen5x5Presenter.hpp>
+#include <gui/chosing_mode_screen/Chosing_modeView.hpp>
+#include <gui/chosing_mode_screen/Chosing_modePresenter.hpp>
 
 
 /**
@@ -46,11 +55,15 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< MainScreenView,
+    typedef touchgfx::meta::TypeList< Screen5x5_letterMergingView,
+            touchgfx::meta::TypeList< MainScreenView,
             touchgfx::meta::TypeList< GameOverScreenView,
             touchgfx::meta::TypeList< SelectedGameDesignView,
             touchgfx::meta::TypeList< Screen3x3View,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::TypeList< Screen5x5_superMergingView,
+            touchgfx::meta::TypeList< Screen5x5View,
+            touchgfx::meta::TypeList< Chosing_modeView,
+            touchgfx::meta::Nil > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -62,11 +75,15 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< MainScreenPresenter,
+    typedef touchgfx::meta::TypeList< Screen5x5_letterMergingPresenter,
+            touchgfx::meta::TypeList< MainScreenPresenter,
             touchgfx::meta::TypeList< GameOverScreenPresenter,
             touchgfx::meta::TypeList< SelectedGameDesignPresenter,
             touchgfx::meta::TypeList< Screen3x3Presenter,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::TypeList< Screen5x5_superMergingPresenter,
+            touchgfx::meta::TypeList< Screen5x5Presenter,
+            touchgfx::meta::TypeList< Chosing_modePresenter,
+            touchgfx::meta::Nil > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -79,10 +96,11 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
+            touchgfx::meta::TypeList< WipeTransition<EAST>,
             touchgfx::meta::TypeList< SlideTransition<EAST>,
-            touchgfx::meta::TypeList< BlockTransition,
             touchgfx::meta::TypeList< CoverTransition<EAST>,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::TypeList< BlockTransition,
+            touchgfx::meta::Nil > > > >
             > GeneratedTransitionTypes;
 
     /**
@@ -92,7 +110,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoSelectedGameDesignScreenNoTransition();
+        app.gotoChosing_modeScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

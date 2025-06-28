@@ -25,7 +25,6 @@
     <ClCompile Include="..\..\gui\src\model\Model.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\Tile.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\TileBase.cpp"/>
     <ClCompile Include="..\..\gui\src\gameoverscreen_screen\GameOverScreenPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\gameoverscreen_screen\GameOverScreenView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\gameoverscreen_screen\GameOverScreenViewBase.cpp"/>
@@ -41,6 +40,24 @@
     <ClCompile Include="..\..\generated\gui_generated\src\screen3x3_screen\Screen3x3ViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\Tile3x3.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\Tile3x3Base.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen5x5_screen\Screen5x5Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen5x5_screen\Screen5x5View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen5x5_screen\Screen5x5ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\Tile5x5.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\Tile5x5Base.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\TileBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\chosing_mode_screen\Chosing_modePresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\chosing_mode_screen\Chosing_modeView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\chosing_mode_screen\Chosing_modeViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\common\GameGlobal.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen5x5_supermerging_screen\Screen5x5_superMergingPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen5x5_supermerging_screen\Screen5x5_superMergingView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen5x5_supermerging_screen\Screen5x5_superMergingViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen5x5_lettermerging_screen\Screen5x5_letterMergingPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen5x5_lettermerging_screen\Screen5x5_letterMergingView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen5x5_lettermerging_screen\Screen5x5_letterMergingViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\Tile_letter.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\Tile_letterBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -195,7 +212,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\Tile.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\TileBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\gameoverscreen_screen\GameOverScreenPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\gameoverscreen_screen\GameOverScreenView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\gameoverscreen_screen\GameOverScreenViewBase.hpp"/>
@@ -211,6 +227,24 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen3x3_screen\Screen3x3ViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\Tile3x3.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\Tile3x3Base.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_screen\Screen5x5Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_screen\Screen5x5View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen5x5_screen\Screen5x5ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\Tile5x5.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\Tile5x5Base.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\TileBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\chosing_mode_screen\Chosing_modePresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\chosing_mode_screen\Chosing_modeView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\chosing_mode_screen\Chosing_modeViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\common\GameGlobal.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_supermerging_screen\Screen5x5_superMergingPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_supermerging_screen\Screen5x5_superMergingView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen5x5_supermerging_screen\Screen5x5_superMergingViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_lettermerging_screen\Screen5x5_letterMergingPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen5x5_lettermerging_screen\Screen5x5_letterMergingView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen5x5_lettermerging_screen\Screen5x5_letterMergingViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\Tile_letter.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\Tile_letterBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

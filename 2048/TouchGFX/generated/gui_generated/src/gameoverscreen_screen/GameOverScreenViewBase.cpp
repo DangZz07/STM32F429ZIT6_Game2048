@@ -16,7 +16,31 @@ GameOverScreenViewBase::GameOverScreenViewBase() :
     box1.setColor(touchgfx::Color::getColorFromRGB(176, 84, 62));
     add(box1);
 
-    textArea1.setXY(38, 114);
+    flexButton2.setBoxWithBorderPosition(0, 0, 110, 50);
+    flexButton2.setBorderSize(5);
+    flexButton2.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton2.setPosition(65, 79, 110, 50);
+    add(flexButton2);
+
+    bestText.setXY(131, 104);
+    bestText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    bestText.setLinespacing(0);
+    Unicode::snprintf(bestTextBuffer, BESTTEXT_SIZE, "%s", touchgfx::TypedText(T_BEST).getText());
+    bestText.setWildcard(bestTextBuffer);
+    bestText.resizeToCurrentText();
+    bestText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_R15Q));
+    add(bestText);
+
+    scoreText.setXY(90, 104);
+    scoreText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    scoreText.setLinespacing(0);
+    Unicode::snprintf(scoreTextBuffer, SCORETEXT_SIZE, "%s", touchgfx::TypedText(T_SCORE).getText());
+    scoreText.setWildcard(scoreTextBuffer);
+    scoreText.resizeToCurrentText();
+    scoreText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CAYP));
+    add(scoreText);
+
+    textArea1.setXY(38, 26);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_I9KM));
@@ -26,14 +50,33 @@ GameOverScreenViewBase::GameOverScreenViewBase() :
     menu.setBorderSize(5);
     menu.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     menu.setAction(flexButtonCallback);
-    menu.setPosition(65, 166, 110, 50);
+    menu.setPosition(65, 152, 110, 50);
     add(menu);
 
-    textArea2_1.setXY(84, 179);
+    textArea2_1.setXY(84, 160);
     textArea2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2_1.setLinespacing(0);
     textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7DYD));
     add(textArea2_1);
+
+    flexButton1.setBoxWithBorderPosition(0, 0, 110, 50);
+    flexButton1.setBorderSize(5);
+    flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton1.setAction(flexButtonCallback);
+    flexButton1.setPosition(65, 223, 110, 50);
+    add(flexButton1);
+
+    textArea2.setXY(83, 234);
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2.setLinespacing(0);
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_KQ4M));
+    add(textArea2);
+
+    textArea3.setXY(85, 87);
+    textArea3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea3.setLinespacing(0);
+    textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_5N6N));
+    add(textArea3);
 }
 
 GameOverScreenViewBase::~GameOverScreenViewBase()
@@ -51,7 +94,14 @@ void GameOverScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractB
     if (&src == &menu)
     {
         //Interaction1
-        //When menu clicked change screen to SelectedGameDesign
+        //When menu clicked change screen to Chosing_mode
+        //Go to Chosing_mode with block transition
+        application().gotoChosing_modeScreenBlockTransition();
+    }
+    if (&src == &flexButton1)
+    {
+        //Interaction2
+        //When flexButton1 clicked change screen to SelectedGameDesign
         //Go to SelectedGameDesign with block transition
         application().gotoSelectedGameDesignScreenBlockTransition();
     }

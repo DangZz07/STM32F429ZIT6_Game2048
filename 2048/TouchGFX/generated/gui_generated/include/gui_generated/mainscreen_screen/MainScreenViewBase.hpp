@@ -8,8 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/Tile.hpp>
 #include <gui/containers/Score.hpp>
 #include <gui/containers/Best.hpp>
@@ -39,8 +40,13 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box2;
-    touchgfx::TextArea textArea1;
     touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::Box box3;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1_1_1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1_1;
+    touchgfx::TextArea textArea2_1_1;
+    touchgfx::TextArea textArea2_1;
+    touchgfx::TextArea textArea1;
     Tile tile00;
     Tile tile01;
     Tile tile02;
@@ -66,11 +72,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<MainScreenViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<MainScreenViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

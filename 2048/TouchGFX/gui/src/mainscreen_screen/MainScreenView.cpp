@@ -5,6 +5,15 @@
 #include <cstdlib>     // srand, rand
 #include <ctime> 
 #include <gui/common/FrontendApplication.hpp>
+#include <gui/common/GameGlobal.hpp>
+#define TILE_SIZE 60
+static uint32_t seed = 1;
+
+uint32_t MainScreenView::myRand()
+{
+    seed = seed * 1664525UL + 1013904223UL;
+    return seed;
+}
 MainScreenView::MainScreenView()
 {
     // Gán từng Tile từ Designer vào mảng 2D
@@ -32,7 +41,8 @@ MainScreenView::MainScreenView()
 void MainScreenView::setupScreen()
 {   
     score = 0;
-    bestScore = 0;
+    bestScore = GameGlobal::bestScore;
+    const int tileOffsetY = 80;
     scoreContainer.setScore(score);
     bestContainer.setScore(bestScore);
     updateScoreText();
@@ -41,6 +51,9 @@ void MainScreenView::setupScreen()
         for (int j = 0; j < 4; ++j)
         {
             tiles[i][j]->setValue(0); // ẩn ban đầu
+            tiles[i][j]->moveTo((j) * TILE_SIZE,tileOffsetY + i * TILE_SIZE);
+            tiles[i][j]->centerX = (j) * TILE_SIZE + TILE_SIZE / 2;
+            tiles[i][j]->centerY = tileOffsetY + i * TILE_SIZE + TILE_SIZE / 2;
         }
     }
 
@@ -83,6 +96,9 @@ void MainScreenView::handleGestureEvent(const GestureEvent& evt)
             moveUp();
         }
     }
+    if (hasGridChanged()) {
+        spawnRandomTile();  // chi spawn neu co thay doi
+    }
      // Sau khi di chuyển + spawn → kiểm tra thua
     if (isGameOver())
     {
@@ -91,7 +107,9 @@ void MainScreenView::handleGestureEvent(const GestureEvent& evt)
 }
 //cap nhat diem
 void MainScreenView::updateScoreText()
-{
+{   
+    GameGlobal::yourScore = score;
+    GameGlobal::bestScore = bestScore;
     scoreContainer.setScore(score);
     bestContainer.setScore(bestScore);
 }
@@ -247,27 +265,31 @@ void MainScreenView::moveDown()
 }
 
 void MainScreenView::handleKeyEvent(uint8_t key)
-{
+{   
+    saveGridState();
     switch (key)
     {
     case '4':
         moveLeft();
-        spawnRandomTile(); 
+        //spawnRandomTile(); 
         break;
     case '6':
         moveRight();
-        spawnRandomTile();  
+        //spawnRandomTile();  
         break;
     case '8':
         moveUp();
-        spawnRandomTile(); 
+        //spawnRandomTile(); 
         break;
     case '2':
         moveDown();
-        spawnRandomTile();     
+        //spawnRandomTile();     
         break;
     default:
         break;
+    }
+    if(hasGridChanged()){
+        spawnRandomTile();
     }
      // Sau khi di chuyển + spawn → kiểm tra thua
     if (isGameOver())
@@ -293,17 +315,25 @@ void MainScreenView::spawnRandomTile()
     // 2) Nếu có ô trống, chọn ngẫu nhiên một ô
     if (emptyCount > 0) {
         // Khởi tạo seed lần đầu (bạn có thể làm trong constructor)
-        static bool seeded = false;
-        if (!seeded) {
-            std::srand(std::time(nullptr));
-            seeded = true;
-        }
-        int idx = std::rand() % emptyCount;
+//        static bool seeded = false;
+//        if (!seeded) {
+//            std::srand(12345);
+//            seeded = true;
+//        }
+//        int idx = std::rand() % emptyCount;
+//        int rr = empties[idx].row;
+//        int cc = empties[idx].col;
+//
+//        // 3) Đặt giá trị 2 vào ô đó
+//        tiles[rr][cc]->setValue(2);
+        int idx = myRand() % emptyCount;
         int rr = empties[idx].row;
         int cc = empties[idx].col;
+//        tiles[rr][cc]->setValue(2);
 
-        // 3) Đặt giá trị 2 vào ô đó
-        tiles[rr][cc]->setValue(2);
+        uint16_t newValue = (myRand() % 10 == 0) ? 4 : 2;
+        tiles[rr][cc]->setValue(newValue);
+        tiles[rr][cc]->animateSpawn();//animation spawn
     }
     else {
         // KHÔNG còn ô trống kiem tra xem co the gop duoc khong neu khong thi chuyen sang Game Over
@@ -347,4 +377,18 @@ bool MainScreenView::isGameOver() // kiem tra xem con co the gop cac o lai voi n
 
     // Không còn nước đi hợp lệ
     return true;
+}
+void MainScreenView::saveGridState()
+{
+    for (int i = 0; i < 4; ++i)
+        for (int j = 0; j < 4; ++j)
+            gridBeforeMove[i][j] = tiles[i][j]->getValue();
+}
+bool MainScreenView::hasGridChanged()
+{
+    for (int i = 0; i < 4; ++i)
+        for (int j = 0; j < 4; ++j)
+            if (gridBeforeMove[i][j] != tiles[i][j]->getValue())
+                return true;
+    return false;
 }

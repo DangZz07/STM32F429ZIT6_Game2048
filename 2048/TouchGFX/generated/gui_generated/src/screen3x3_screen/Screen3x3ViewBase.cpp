@@ -12,12 +12,25 @@ Screen3x3ViewBase::Screen3x3ViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
+    flexButton1_1_1.setBoxWithBorderPosition(0, 0, 65, 35);
+    flexButton1_1_1.setBorderSize(5);
+    flexButton1_1_1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton1_1_1.setAction(flexButtonCallback);
+    flexButton1_1_1.setPosition(48, 36, 65, 35);
+    add(flexButton1_1_1);
+
     flexButton1_1.setBoxWithBorderPosition(0, 0, 65, 35);
     flexButton1_1.setBorderSize(5);
     flexButton1_1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     flexButton1_1.setAction(flexButtonCallback);
-    flexButton1_1.setPosition(88, 42, 65, 35);
+    flexButton1_1.setPosition(128, 36, 65, 35);
     add(flexButton1_1);
+
+    textArea2_1_1.setXY(64, 48);
+    textArea2_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2_1_1.setLinespacing(0);
+    textArea2_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AQ0C));
+    add(textArea2_1_1);
 
     scoreContainer.setXY(135, 6);
     add(scoreContainer);
@@ -29,13 +42,13 @@ Screen3x3ViewBase::Screen3x3ViewBase() :
     box2.setColor(touchgfx::Color::getColorFromRGB(119, 110, 101));
     add(box2);
 
-    textArea1.setXY(8, 6);
+    textArea1.setXY(13, 6);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(227, 110, 27));
     textArea1.setLinespacing(5);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WUUP));
     add(textArea1);
 
-    textArea2_1.setXY(104, 54);
+    textArea2_1.setXY(146, 48);
     textArea2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2_1.setLinespacing(0);
     textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GMIQ));
@@ -97,5 +110,12 @@ void Screen3x3ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButton
         //When flexButton1_1 clicked change screen to SelectedGameDesign
         //Go to SelectedGameDesign with screen transition towards East
         application().gotoSelectedGameDesignScreenCoverTransitionEast();
+    }
+    if (&src == &flexButton1_1_1)
+    {
+        //Interaction2
+        //When flexButton1_1_1 clicked change screen to Chosing_mode
+        //Go to Chosing_mode with screen transition towards East
+        application().gotoChosing_modeScreenWipeTransitionEast();
     }
 }
