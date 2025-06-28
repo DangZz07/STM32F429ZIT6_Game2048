@@ -1,5 +1,5 @@
 Application/User/gui/Score.o: \
- C:/TouchGFXProjects/2048/TouchGFX/gui/src/containers/Score.cpp \
+ C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/containers/Score.cpp \
  ../../TouchGFX/gui/include/gui/containers/Score.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/ScoreBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

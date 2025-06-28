@@ -1,5 +1,5 @@
 Application/User/gui/Best.o: \
- C:/TouchGFXProjects/2048/TouchGFX/gui/src/containers/Best.cpp \
+ C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/containers/Best.cpp \
  ../../TouchGFX/gui/include/gui/containers/Best.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/BestBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

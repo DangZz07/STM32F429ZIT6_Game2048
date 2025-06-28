@@ -1,5 +1,5 @@
 Application/User/generated/SVGDatabase.o: \
- C:/TouchGFXProjects/2048/TouchGFX/generated/images/src/SVGDatabase.cpp \
+ C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/images/src/SVGDatabase.cpp \
  ../../TouchGFX/generated/images/include/images/SVGDatabase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \

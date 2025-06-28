@@ -24,16 +24,16 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<MainScreenPresenter>::~View()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<MainScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:94:6:virtual void MainScreenViewBase::setupScreen()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:94:6:virtual void MainScreenViewBase::setupScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:116:6:void MainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:116:6:void MainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	2
 ../../TouchGFX/gui/include/gui/containers/Tile.hpp:10:13:Tile::~Tile()	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:89:1:MainScreenViewBase::~MainScreenViewBase()	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:89:1:virtual MainScreenViewBase::~MainScreenViewBase()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:89:1:MainScreenViewBase::~MainScreenViewBase()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:89:1:virtual MainScreenViewBase::~MainScreenViewBase()	1
 ../../TouchGFX/gui/include/gui/containers/Tile.hpp:10:13:virtual Tile::~Tile()	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:9:1:MainScreenViewBase::MainScreenViewBase()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp:9:1:MainScreenViewBase::MainScreenViewBase()	1

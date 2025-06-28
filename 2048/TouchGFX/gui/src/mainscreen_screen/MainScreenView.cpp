@@ -5,6 +5,13 @@
 #include <cstdlib>     // srand, rand
 #include <ctime> 
 #include <gui/common/FrontendApplication.hpp>
+static uint32_t seed = 1;
+
+uint32_t myRand()
+{
+    seed = seed * 1664525UL + 1013904223UL;
+    return seed;
+}
 MainScreenView::MainScreenView()
 {
     // Gán từng Tile từ Designer vào mảng 2D
@@ -62,12 +69,14 @@ void MainScreenView::handleGestureEvent(const GestureEvent& evt)
         {
             // Vuốt sang phải
              moveRight();
+             spawnRandomTile();
 
         }
         else
         {
             // Vuốt sang trái
             moveLeft();
+            spawnRandomTile();
         }
     }
     else if (evt.getType() == GestureEvent::SWIPE_VERTICAL)
@@ -76,11 +85,13 @@ void MainScreenView::handleGestureEvent(const GestureEvent& evt)
         {
             // Vuốt xuống
              moveDown();
+             spawnRandomTile();
         }
         else
         {
             // Vuốt lên
             moveUp();
+            spawnRandomTile();
         }
     }
      // Sau khi di chuyển + spawn → kiểm tra thua
@@ -293,17 +304,24 @@ void MainScreenView::spawnRandomTile()
     // 2) Nếu có ô trống, chọn ngẫu nhiên một ô
     if (emptyCount > 0) {
         // Khởi tạo seed lần đầu (bạn có thể làm trong constructor)
-        static bool seeded = false;
-        if (!seeded) {
-            std::srand(std::time(nullptr));
-            seeded = true;
-        }
-        int idx = std::rand() % emptyCount;
+//        static bool seeded = false;
+//        if (!seeded) {
+//            std::srand(12345);
+//            seeded = true;
+//        }
+//        int idx = std::rand() % emptyCount;
+//        int rr = empties[idx].row;
+//        int cc = empties[idx].col;
+//
+//        // 3) Đặt giá trị 2 vào ô đó
+//        tiles[rr][cc]->setValue(2);
+        int idx = myRand() % emptyCount;
         int rr = empties[idx].row;
         int cc = empties[idx].col;
+//        tiles[rr][cc]->setValue(2);
 
-        // 3) Đặt giá trị 2 vào ô đó
-        tiles[rr][cc]->setValue(2);
+        uint16_t newValue = (myRand() % 10 == 0) ? 4 : 2;
+        tiles[rr][cc]->setValue(newValue);
     }
     else {
         // KHÔNG còn ô trống kiem tra xem co the gop duoc khong neu khong thi chuyen sang Game Over

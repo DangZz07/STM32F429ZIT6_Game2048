@@ -1,4 +1,5 @@
-Application/User/main.o: C:/TouchGFXProjects/2048/Core/Src/main.c \
+Application/User/main.o: \
+ C:/Embedded/STM32F429ZIT6_Game2048/2048/Core/Src/main.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \

@@ -1,5 +1,5 @@
 Application/User/generated/SelectedGameDesignViewBase.o: \
- C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/selectedgamedesign_screen/SelectedGameDesignViewBase.cpp \
+ C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/selectedgamedesign_screen/SelectedGameDesignViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/selectedgamedesign_screen/SelectedGameDesignViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

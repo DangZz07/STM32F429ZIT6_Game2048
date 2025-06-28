@@ -34,20 +34,20 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:154:18:void touchgfx::SlideTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::EAST]	3
 ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:59:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:87:18:void touchgfx::SlideTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::EAST]	4
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:61:6:void FrontendApplicationBase::gotoGameOverScreenScreenSlideTransitionEastImpl()	8
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:61:6:void FrontendApplicationBase::gotoGameOverScreenScreenSlideTransitionEastImpl()	8
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:308:17:static touchgfx::LCD& touchgfx::HAL::lcd()	3
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:23:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:42:6:void FrontendApplicationBase::gotoMainScreenScreenCoverTransitionEast()	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:55:6:void FrontendApplicationBase::gotoGameOverScreenScreenSlideTransitionEast()	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:68:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenNoTransition()	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:79:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenBlockTransition()	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:90:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEast()	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:103:6:void FrontendApplicationBase::gotoScreen3x3ScreenCoverTransitionEast()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:23:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:42:6:void FrontendApplicationBase::gotoMainScreenScreenCoverTransitionEast()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:55:6:void FrontendApplicationBase::gotoGameOverScreenScreenSlideTransitionEast()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:68:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenNoTransition()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:79:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenBlockTransition()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:90:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEast()	1
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:103:6:void FrontendApplicationBase::gotoScreen3x3ScreenCoverTransitionEast()	1
 ../../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::CoverTransition<touchgfx::EAST>]	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:109:6:void FrontendApplicationBase::gotoScreen3x3ScreenCoverTransitionEastImpl()	7
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:48:6:void FrontendApplicationBase::gotoMainScreenScreenCoverTransitionEastImpl()	7
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:109:6:void FrontendApplicationBase::gotoScreen3x3ScreenCoverTransitionEastImpl()	7
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:48:6:void FrontendApplicationBase::gotoMainScreenScreenCoverTransitionEastImpl()	7
 ../../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = SelectedGameDesignView]	1
 ../../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = SelectedGameDesignPresenter]	1
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:96:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEastImpl()	7
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:85:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenBlockTransitionImpl()	8
-C:/TouchGFXProjects/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:74:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenNoTransitionImpl()	7
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:96:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenCoverTransitionEastImpl()	7
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:85:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenBlockTransitionImpl()	8
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:74:6:void FrontendApplicationBase::gotoSelectedGameDesignScreenNoTransitionImpl()	7

@@ -1,5 +1,5 @@
 Application/User/gui/Model.o: \
- C:/TouchGFXProjects/2048/TouchGFX/gui/src/model/Model.cpp \
+ C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/model/Model.cpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
