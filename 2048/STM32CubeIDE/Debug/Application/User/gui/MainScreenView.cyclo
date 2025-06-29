@@ -15,5 +15,5 @@ C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/mainscreen_screen/MainS
 C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:290:6:void MainScreenView::spawnRandomTile()	6
 C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:65:6:virtual void MainScreenView::handleGestureEvent(const touchgfx::GestureEvent&)	6
 C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:261:6:virtual void MainScreenView::handleKeyEvent(uint8_t)	6
-C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:424:6:virtual void MainScreenView::handleTickEvent()	12
+C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:424:6:virtual void MainScreenView::handleTickEvent()	11
 C:/Embedded/STM32F429ZIT6_Game2048/2048/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:40:6:virtual void MainScreenView::setupScreen()	3
