@@ -25,16 +25,24 @@ Git:              v2.30+
 
 Bước 1: Cài đặt Tool
 Cài đặt STM32CubeIDE: https://www.st.com/en/development-tools/stm32cubeide.html
+
 Cài đặt TouchGFX Designer: https://www.st.com/en/development-tools/touchgfx.html
+
 Clone repository: git clone https://github.com/DangZz07/STM32F429ZIT6_Game2048.git
 
 Bước 2: Mở Project
+
 Mở STM32CubeIDE.
+
 Chọn File > Import > Existing Project into Workspace.
+
 Chọn thư mục chứa project.
 
 Bước 3: Build & Flash
+
 Click Build Project (Ctrl + B).
+
 Kết nối STM32F429 Discovery qua USB.
+
 Nhấn Run > Debug để nạp chương trình.
 
