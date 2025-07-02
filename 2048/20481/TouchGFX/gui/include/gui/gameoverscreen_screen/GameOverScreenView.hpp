@@ -11,6 +11,7 @@ public:
     virtual ~GameOverScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void handleTickEvent();
 protected:
 };
 

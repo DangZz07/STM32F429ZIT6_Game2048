@@ -1,5 +1,5 @@
 Application/User/generated/Kerning_verdana_10_4bpp.o: \
- C:/Embedded/20481\ (1).zip_expanded/20481/TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.cpp \
+ C:/Embedded/STM32F429ZIT6_Game2048/2048/20481/TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
