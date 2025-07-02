@@ -13,12 +13,19 @@ Super Merging Mode: gộp nhiều ô giống nhau liên tiếp (2-2-2 → 6).
 🛠 Công cụ phát triển
 
 Tool	            Version	        Mục đích
+
 STM32CubeMX	      6.x.x	          Cấu hình Clock, GPIO, Middleware
+
 STM32CubeIDE	    1.18.1         	IDE biên dịch mã cho STM32F429
+
 TouchGFX Designer	4.25	          Thiết kế giao diện đồ họa
+
 ST-Link Utility	  Mới nhất	      Flash firmware vào board
+
 GCC ARM Embedded	Tích hợp sẵn	  Trình biên dịch trong STM32CubeIDE
+
 FreeRTOS:         v10.6.1 (CMSIS-RTOS V2)
+
 Git:              v2.30+
 
 ⚙ Hướng dẫn cài đặt & build
