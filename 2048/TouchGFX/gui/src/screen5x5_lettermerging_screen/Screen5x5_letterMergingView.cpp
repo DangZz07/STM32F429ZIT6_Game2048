@@ -57,7 +57,7 @@ void Screen5x5_letterMergingView::setupScreen()
         }
     }
 
-    tiles[0][0]->setValue(0);
+    tiles[0][0]->setValue(1);
     tiles[0][1]->setValue(0);
     Screen5x5_letterMergingViewBase::setupScreen();
 }
@@ -324,14 +324,11 @@ void Screen5x5_letterMergingView::spawnRandomTile()
 //        int cc = empties[idx].col;
 //
 //        // 3) Đặt giá trị 2 vào ô đó
-//        tiles[rr][cc]->setValue(2);
         int idx = myRand() % emptyCount;
         int rr = empties[idx].row;
         int cc = empties[idx].col;
-//        tiles[rr][cc]->setValue(2);
-
-        uint16_t newValue = (myRand() % 10 == 0) ? 4 : 2;
-        tiles[rr][cc]->setValue(newValue);
+        tiles[rr][cc]->setValue(0);
+        printf("[SPAWN] Tile (%d, %d) -> A (value = 0)\n", rr, cc);
         tiles[rr][cc]->animateSpawn();//animation spawn
     }
     else {

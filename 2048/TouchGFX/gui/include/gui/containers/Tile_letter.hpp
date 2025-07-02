@@ -14,10 +14,12 @@ public:
     void animateSpawn();
     virtual void handleTickEvent();
     int centerX, centerY;
+
 protected:
     int currentStep = 0;
     static const int totalSteps = 6;
     uint16_t storedValue = 0xFFFF;  //luu trang thai chu cai
+    static const int TEXTAREA1_SIZE = 2; // đủ để chứa 1 ký tự + null
 };
 
 #endif // TILE_LETTER_HPP
