@@ -1,9 +1,0 @@
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-../../TouchGFX/generated/gui_generated/include/gui_generated/selectedgamedesign_screen/SelectedGameDesignViewBase.hpp:24:18:virtual void SelectedGameDesignViewBase::onBtn5x5Clicked()	1
-C:/TouchGFXProjects/2048/TouchGFX/gui/src/selectedgamedesign_screen/SelectedGameDesignView.cpp:13:6:virtual void SelectedGameDesignView::tearDownScreen()	1
-../../TouchGFX/gui/include/gui/selectedgamedesign_screen/SelectedGameDesignView.hpp:11:13:SelectedGameDesignView::~SelectedGameDesignView()	1
-../../TouchGFX/gui/include/gui/selectedgamedesign_screen/SelectedGameDesignView.hpp:11:13:virtual SelectedGameDesignView::~SelectedGameDesignView()	1
-C:/TouchGFXProjects/2048/TouchGFX/gui/src/selectedgamedesign_screen/SelectedGameDesignView.cpp:3:1:SelectedGameDesignView::SelectedGameDesignView()	1
-C:/TouchGFXProjects/2048/TouchGFX/gui/src/selectedgamedesign_screen/SelectedGameDesignView.cpp:8:6:virtual void SelectedGameDesignView::setupScreen()	1
